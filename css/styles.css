@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --white: hsl(0, 0%, 100%);
+  --border: hsl(0, 0%, 93%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.1rem;
+  background-color: var(--dark-cyan);
+  background-image: url('../images/bg-pattern-top.svg'),
+    url('../images/bg-pattern-bottom.svg');
+  background-repeat: no-repeat;
+  background-position: bottom 45vh right 45vw, top 45vh left 45vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.card__header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  margin-block-end: 2rem;
+}
+
+.card__cover {
+  grid-column: 1 / 4;
+}
+
+.card__avatar {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  justify-self: center;
+  border-radius: 50%;
+  position: absolute;
+  inset-block-start: -4rem;
+  outline: 0.4rem solid var(--white);
+  object-fit: cover;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 1.5rem;
+  gap: 0.3rem;
+  border-block-end: 2px solid var(--border);
+}
+
+.card__user {
+  font-size: 1.1rem;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.card__age {
+  font-size: 1rem;
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+  margin-inline-start: 0.3rem;
+}
+
+.card__city {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+.card__socials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 8rem;
+  justify-items: center;
+  padding-block: 2rem 1rem;
+  padding-inline: 2rem;
+}
+
+.card__social h2 {
+  font-size: 1.1rem;
+  margin-block-end: 0.2rem;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.card__social p {
+  font-size: 0.8rem;
+  color: var(--dark-grayish-blue);
+  letter-spacing: 0.1rem;
+}
+
+.attribution {
+  padding-block: 2rem;
+  font-size: 0.8rem;
+}
+
+.attribution-auth {
+  color: var(--very-dark-desaturated-blue);
+  text-decoration: none;
+}
